@@ -10,7 +10,7 @@ public class Animal {
         } else if ("Хищник".equals(animalKind)) {
             return List.of("Животные", "Птицы", "Рыба");
         } else {
-            throw new Exception("Неизвестный вид животного, используйте значение Травоядное или Хищник. Вы ввели: " + animalKind);
+            throw new Exception("Неизвестный вид животного, используйте значение Травоядное или Хищник");
         }
     }
 

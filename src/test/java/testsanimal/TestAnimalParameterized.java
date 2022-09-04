@@ -23,22 +23,12 @@ public class TestAnimalParameterized {
         return new Object[][] {
                 {"Травоядное", List.of("Трава", "Различные растения")},
                 {"Хищник", List.of("Животные", "Птицы", "Рыба")},
-                {"Всеядные", List.of("Животные", "Птицы", "Рыба", "Трава")},
-                {"", List.of("")}
         };
     }
 
     @Test
     public void TestMethodGetFoodParameterized() throws Exception {
         Animal animal = new Animal();
-        if (checkedAnimalKind.equals("Хищник") || checkedAnimalKind.equals("Травоядное")) {
-            assertEquals(expectedListFood, animal.getFood(checkedAnimalKind));
-        } else {
-            try {
-                animal.getFood(checkedAnimalKind);
-            } catch (Exception exception) {
-                throw new Exception(exception);
-            }
-        }
+        assertEquals(expectedListFood, animal.getFood(checkedAnimalKind));
     }
 }
